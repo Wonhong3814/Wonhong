@@ -27,6 +27,9 @@ TURTLEBOT3_MODEL = os.environ['TURTLEBOT3_MODEL']
 WORLD_MODEL = os.environ['WAREHOUSE_MODEL']
 
 def generate_launch_description():
+    model = LaunchConfiguration('model', default='waffle')
+    world = LaunchConfiguration('world', default='small_warehouse')
+    
     use_sim_time = LaunchConfiguration('use_sim_time', default='True')
 
     aws_small_warehouse_dir = os.path.join(
