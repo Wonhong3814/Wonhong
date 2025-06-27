@@ -23,9 +23,6 @@ from launch.actions import IncludeLaunchDescription, ExecuteProcess
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 
-TURTLEBOT3_MODEL = os.environ['TURTLEBOT3_MODEL']
-WORLD_MODEL = os.environ['WAREHOUSE_MODEL']
-
 def generate_launch_description():
     model = LaunchConfiguration('model', default='waffle')
     world = LaunchConfiguration('world', default='small_warehouse')
@@ -35,14 +32,9 @@ def generate_launch_description():
     aws_small_warehouse_dir = os.path.join(
         get_package_share_directory('aws_robomaker_small_warehouse_world'), 'launch'
     )
-    if WORLD_MODEL == 'small_warehouse':
-        aws_small_warehouse = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([aws_small_warehouse_dir, '/no_roof_small_warehouse_launch.py'])
-        )
-    elif WORLD_MODEL == 'big_warehouse':
-        aws_small_warehouse = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([aws_small_warehouse_dir, '/big_warehouse_launch.py'])
-        )
+    aws_small_warehouse = IncludeLaunchDescription(
+    PythonLaunchDescriptionSource([aws_small_warehouse_dir, '/no_roof_small_warehouse_launch.py'])
+    )
 
     launch_file_dir = os.path.join(
         get_package_share_directory('turtlebot3_gazebo'), 'launch'
