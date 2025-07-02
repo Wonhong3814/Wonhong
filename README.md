@@ -1,7 +1,10 @@
 cd ~/microswarm_planning/src
-git clone https://gitlab.com/urobotkaist/microswarm_ros2.git -b jw_dev
+
+git clone https://github.com/Wonhong3814/Wonhong.git tracker -b tracker 
+
 cd ..
-colcon build --symlink-install
+
+colcon build --packages-select tracker --symlink-install
 
 
 1. Start the Gazebo simulation with the robot's initial position:
