@@ -8,6 +8,6 @@ def generate_launch_description():
             executable='controller_node',  
             name='tracker',
             output='screen',
-            parameters=[{'use_sim_time': True}]  # 시뮬 시간 사용 시
+            parameters=[{'use_sim_time': True}]
         )
     ])
