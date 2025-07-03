@@ -9,7 +9,6 @@ find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 
-# ── 실행 파일 이름: controller_node ──
 add_executable(controller_node src/controller_node.cpp)
 
 ament_target_dependencies(controller_node
