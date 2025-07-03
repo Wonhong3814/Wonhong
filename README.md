@@ -1,8 +1,8 @@
 ```cd ~/microswarm_planning/src```
 
-git clone https://github.com/Wonhong3814/Wonhong.git tracker -b tracker 
+```git clone https://github.com/Wonhong3814/Wonhong.git tracker -b tracker```
 
-cd ..
+```cd ..```
 
 ```colcon build --packages-select tracker --symlink-install```
 
