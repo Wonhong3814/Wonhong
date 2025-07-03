@@ -22,3 +22,5 @@ ros2 service call /global_planner/request_path thetastar_global_planner/srv/GetP
 
 5. Initiate track controller
 ros2 launch tracker controller_launch.py 
+
+```bash ``` 
